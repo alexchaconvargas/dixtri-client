@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, hashHistory} from 'react-router';
+import App from './components/App';
 import VacancyManager from './components/vacancyManager/VacancyManager';
 
-//const pair = ['Trainspotting', '28 Days Later'];
+const routes = <Route component={App}>
+  <Route path="/" component={VacancyManager} />
+</Route>;
 
 ReactDOM.render(
-  <VacancyManager />,
+  <Router history={hashHistory}>{routes}</Router>,
   document.getElementById('app')
 );
