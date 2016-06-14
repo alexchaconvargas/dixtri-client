@@ -38,7 +38,6 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "immutable": "^3.8.1",
     "react": "^15.1.0",
     "react-addons-pure-render-mixin": "^15.1.0",

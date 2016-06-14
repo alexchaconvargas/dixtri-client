@@ -6,9 +6,20 @@ export default React.createClass({
 	},
 	render: function() {
 		return <div className="candidate-list">
+		<table class="table table-striped">
+		<thead>
+		<tr><th>Nombre</th><th>Apellido</th><th>Email</th></tr>
+		</thead>
+		<tbody>
+		
 		{this.getCandidates().map(entry =>
-	        <h1>{entry.get('name')}</h1>
+			<tr>
+	        <td>{entry.get('name')}</td> <td>{entry.get('apellido1')}</td> <td>{entry.get('email')}</td>
+	        </tr>
 	      )}
+		
+		</tbody>
+		</table>
 		</div>;
 	}
 });

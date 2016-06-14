@@ -13,9 +13,9 @@ store.dispatch({
   state: {
     menuItems: ['Home', 'AboutUs'],
     candidates: [
-    			{'_id' : 1 , 'name': 'Alfredo', 'apellido1': 'Santín'}, 
-    			{'_id' : 2 ,'name': 'Pedro', 'apellido1': 'Comí'},
-    			{'_id' : 3 ,'name': 'Jose', 'apellido1': 'Roca'}]
+    			{'_id' : 1 , 'name': 'Alfredo', 'apellido1': 'Santín', 'email' : 'alfredo@gmail.com'},
+    			{'_id' : 2 ,'name': 'Pedro', 'apellido1': 'Comí', 'email' : 'pedro@gmail.com'},
+    			{'_id' : 3 ,'name': 'Jose', 'apellido1': 'Roca', 'email' : 'jose@gmail.com'}]
 	}
 });
 
