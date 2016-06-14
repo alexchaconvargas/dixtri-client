@@ -1,10 +1,12 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import {List, Map} from 'immutable';
+import {connect} from 'react-redux';
+
 import Header from './Header';
 import Filter from './Filter';
-import {connect} from 'react-redux';
 import CandidateList from './CandidateList'
-import {List, Map} from 'immutable';
+import * as actionCreators from '../../action_creators';
 
 export const VacancyManager = React.createClass({
 	mixins: [PureRenderMixin],
@@ -12,7 +14,7 @@ export const VacancyManager = React.createClass({
     return <div className="vacancy-manager">
         <Header menuItems = {this.props.menuItems} />
         <Filter />
-        <CandidateList candidates = {this.props.candidates} />
+        <CandidateList {...this.props} />
     </div>;
   }
 });
@@ -24,4 +26,4 @@ function mapStateToProps(state) {
   };
 }
 
-export const VacancyManagerContainer = connect(mapStateToProps)(VacancyManager);
+export const VacancyManagerContainer = connect(mapStateToProps, actionCreators)(VacancyManager);

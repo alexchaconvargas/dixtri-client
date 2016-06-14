@@ -13,13 +13,11 @@ store.dispatch({
   state: {
     menuItems: ['Home', 'AboutUs'],
     candidates: [
-    			{'_id' : 1 , 'name': 'Alfredo', 'apellido1': 'Santín', 'email' : 'alfredo@gmail.com'},
-    			{'_id' : 2 ,'name': 'Pedro', 'apellido1': 'Comí', 'email' : 'pedro@gmail.com'},
-    			{'_id' : 3 ,'name': 'Jose', 'apellido1': 'Roca', 'email' : 'jose@gmail.com'}]
+    			{'key' : 1 , 'name': 'Alfredo', 'apellido1': 'Santín', 'email' : 'alfredo@gmail.com'},
+    			{'key' : 2 ,'name': 'Pedro', 'apellido1': 'Comí', 'email' : 'pedro@gmail.com'},
+    			{'key' : 3 ,'name': 'Jose', 'apellido1': 'Roca', 'email' : 'jose@gmail.com'}]
 	}
 });
-
-console.log(store);
 
 const routes = <Route component={App}>
   <Route path="/" component={VacancyManagerContainer} />

@@ -11,13 +11,11 @@ export default React.createClass({
 		<tr><th>Nombre</th><th>Apellido</th><th>Email</th></tr>
 		</thead>
 		<tbody>
-		
 		{this.getCandidates().map(entry =>
-			<tr>
-	        <td>{entry.get('name')}</td> <td>{entry.get('apellido1')}</td> <td>{entry.get('email')}</td>
+			<tr key={entry.get('key')}>
+	        <td>{entry.get('name')}</td><td>{entry.get('apellido1')}</td><td>{entry.get('email')}</td><td><button onClick={() => this.props.discardCandidate(entry)}>D</button></td>
 	        </tr>
 	      )}
-		
 		</tbody>
 		</table>
 		</div>;
