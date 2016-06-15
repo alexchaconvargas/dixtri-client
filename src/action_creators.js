@@ -11,3 +11,9 @@ export function discardCandidate(entry) {
     entry
   };
 }
+
+export function addCandidate() {
+  return {
+    type: 'ADD_CANDIDATE'
+  };
+}

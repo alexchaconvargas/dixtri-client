@@ -5,7 +5,8 @@ import {connect} from 'react-redux';
 
 import Header from './Header';
 import Filter from './Filter';
-import CandidateList from './CandidateList'
+import CandidateList from './CandidateList';
+import DevToolbar from './DevToolbar';
 import * as actionCreators from '../../action_creators';
 
 export const VacancyManager = React.createClass({
@@ -15,6 +16,7 @@ export const VacancyManager = React.createClass({
         <Header menuItems = {this.props.menuItems} />
         <Filter />
         <CandidateList {...this.props} />
+        <DevToolbar {...this.props} />
     </div>;
   }
 });
