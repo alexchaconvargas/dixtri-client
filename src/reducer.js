@@ -14,16 +14,6 @@ function discardCandidate(state, key) {
     return state.set('candidates', newCandidates);
 }
 
-
-function removeByKey (myObj, deleteKey) {
-  return Object.keys(myObj)
-    .filter(key => key !== deleteKey)
-    .reduce((result, current) => {
-      result[current] = myObj[current];
-      return result;
-  }, {});
-}
-
 export default function(state = Map(), action) {
   switch (action.type) {
   case 'SET_STATE':
