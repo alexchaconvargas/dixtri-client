@@ -4,10 +4,24 @@ function setState(state, newState) {
   return state.merge(newState);
 }
 
-function discardCandidate(state, entry) {
+function discardCandidate(state, key) {
   const currentCandidates = state.get('candidates');
-  console.log(currentCandidates);
-    return state.set('candidates', currentCandidates.pop());
+  //console.log(currentCandidates);
+  const newCandidates = currentCandidates.filter((elem) => {
+		console.log(elem);
+		return elem != key
+	});
+    return state.set('candidates', newCandidates);
+}
+
+
+function removeByKey (myObj, deleteKey) {
+  return Object.keys(myObj)
+    .filter(key => key !== deleteKey)
+    .reduce((result, current) => {
+      result[current] = myObj[current];
+      return result;
+  }, {});
 }
 
 export default function(state = Map(), action) {
