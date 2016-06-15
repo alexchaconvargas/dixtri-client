@@ -7,7 +7,8 @@ import App from './components/App';
 import reducer from './reducer';
 import {VacancyManagerContainer} from './components/vacancyManager/VacancyManager';
 
-const store = createStore(reducer);
+const store = createStore(reducer,
+	window.devToolsExtension ? window.devToolsExtension() : f => f);
 store.dispatch({
   type: 'SET_STATE',
   state: {
