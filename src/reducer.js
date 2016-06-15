@@ -5,13 +5,10 @@ function setState(state, newState) {
 }
 
 function discardCandidate(state, key) {
-  const currentCandidates = state.get('candidates');
-  //console.log(currentCandidates);
-  const newCandidates = currentCandidates.filter((elem) => {
-		console.log(elem);
+  const newCandidates = state.get('candidates').filter((elem) => {
 		return elem != key
 	});
-    return state.set('candidates', newCandidates);
+   return state.set('candidates', newCandidates);
 }
 
 export default function(state = Map(), action) {
