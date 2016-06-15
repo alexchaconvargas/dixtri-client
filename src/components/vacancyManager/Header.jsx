@@ -9,9 +9,7 @@ export default React.createClass({
   	render: function() {
 	  return <div className="header">
 	      {this.getMenuItems().map(entry =>
-	        <button key={entry}>
-	          <h1>{entry}</h1>
-	        </button>
+	        <button key={entry}>{entry}</button>
 	      )}
 	  </div>;
 	}
