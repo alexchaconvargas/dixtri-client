@@ -17,7 +17,6 @@ function addCandidate(state){
   return state.set('candidates', newCandidates );
 }
 
-
 export default function(state = Map(), action) {
   switch (action.type) {
     case 'SET_STATE':

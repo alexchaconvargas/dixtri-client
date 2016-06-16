@@ -8,11 +8,8 @@ export default React.createClass({
 	},
   	render: function() {
 	  return <div className="header">
-	      {this.getMenuItems().map(entry =>
-	        <button key={entry}>{entry}</button>
-	      )}
+	  <a href="/#">HOME</a> -|-
+	  <a href="/#/vacancyManager">vacancyManager</a>
 	  </div>;
 	}
 });
-
-
