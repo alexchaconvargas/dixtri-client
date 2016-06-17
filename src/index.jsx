@@ -11,7 +11,7 @@ import Home from './components/home/Home'
 import {VacancyManagerContainer} from './components/vacancyManager/VacancyManager';
 
 const sagaMiddleware = createSagaMiddleware();
-debugger;
+
 const store = createStore(reducer,
   window.devToolsExtension ? window.devToolsExtension() : f => f,
   applyMiddleware(sagaMiddleware));

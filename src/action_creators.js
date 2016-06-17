@@ -17,3 +17,9 @@ export function addCandidate() {
     type: 'ADD_CANDIDATE'
   };
 }
+
+export function requestCandidate() {
+  return {
+    type: 'USER_FETCH_REQUESTED'
+  };
+}
